@@ -1,0 +1,79 @@
+.select-menu
+{
+	z-index: 10;
+	position: absolute;
+	background-color: var(--control-background-color);
+	color: var(--control-second-color);
+	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);
+	border: 1px solid var(--control-second-color);
+	margin-top: 2px;
+	max-height: 120px;
+	border-radius: 6px;
+	overflow-y: scroll;
+
+	&.transform-left
+	{
+		transform: translateX(-90%);
+	}
+
+	li
+	{
+		display: flex;
+		align-items: center;
+		padding: 0px 0px 0px 10px;
+		height: 40px;
+		overflow-x: hidden;
+		white-space: nowrap;
+		cursor: pointer;
+
+		&:hover
+		{
+			&.select-text
+			{
+				color: var(--control-second-active-color);
+			}
+		}
+
+		&.dropdown-menu
+		{
+			position: relative;
+
+			.dropdown-title
+			{
+				display: flex;
+				justify-content: space-between;
+				gap: 10px;
+				height: 40px;
+				align-items: center;
+
+				&:hover
+				{
+					color: var(--control-second-active-color);
+					.icon-dropdown
+					{
+						background-color: var(--control-second-active-color);
+					}
+				}
+
+				.icon-dropdown
+				{
+					width: 15px;
+					height: 15px;
+					mask-repeat: no-repeat;
+					mask-position: center;
+					align-self: center;
+					justify-self: center;
+					
+					background-color: var(--control-color);
+					-webkit-mask-image: url(../icons/dropdown-right.svg);
+					mask-image: url(../icons/dropdown-right.svg);
+				}
+			}
+		} 
+	}
+
+	&::-webkit-scrollbar-thumb 
+	{
+		border-radius: 5px;
+	}
+}

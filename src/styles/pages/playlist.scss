@@ -1,0 +1,175 @@
+@import "../variables.scss";
+
+.playlist-page
+{
+	position: relative;
+	height: 100%;
+
+	.playlist-element
+	{
+		&.top
+		{
+			padding-top: 30px;
+		}
+		&.bottom
+		{
+			padding-bottom: 10px;
+		}
+	}
+
+	.playlist-header
+	{
+		display: flex;
+		gap: 25px;
+		margin: 0px 0px 30px 0px;
+		
+		.playlist-info
+		{
+			color: var(--container-active-color);
+
+			display: flex;
+			gap: 20px;
+
+			flex-direction: column;
+			justify-content: end;
+			
+			.playlist-title
+			{
+				font-weight: bold;
+				font-size: 40px;
+			}
+
+			.author-info
+			{
+				display: flex;
+				align-items: center;
+				gap: 10px;
+
+				.author-name
+				{
+					cursor: pointer;
+					&:hover
+					{
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+
+		.align-end
+		{
+			align-self: flex-end;
+		}
+
+		@media (max-width: $breakpoint-medium)
+		{
+			flex-direction: column;
+			
+			.playlist-info
+			{
+				gap: 10px;
+			}
+			.playlist-title
+			{
+				font-size: 20px !important;
+			}
+		}
+	}
+
+	.playlist-container
+	{
+	//	backdrop-filter: brightness(40%);
+		
+		.buttons-section
+		{
+			margin: 15px 0px 10px 0px;
+			display: flex;
+
+			.icon-plus-playlist
+			{
+				width: 40px;
+				height: 40px;
+				background-color: var(--container-color);
+				-webkit-mask-image: url(../icons/plus.svg);
+				mask-image: url(../icons/plus.svg);
+				
+				-webkit-mask-repeat: no-repeat;
+				-webkit-mask-position: center;
+		
+				mask-repeat: no-repeat;
+				mask-position: center;
+		
+				cursor: pointer;
+		
+				&:hover
+				{
+					background-color: var(--container-active-color);
+				}
+		
+				&.rotated
+				{
+					transform: rotate(45deg);
+					background-color: var(--progressbar-active-color);
+				}
+			}
+		}
+		
+		.songs-header
+		{
+			display: grid;
+			grid-template-columns: 40px 4fr 42.5px 4fr 40px 40px 30px;
+			height: 45px;
+			gap: 10px;
+			padding: 0px 10px;
+			align-items: center;
+			overflow: hidden;
+
+
+			.element
+			{
+				overflow: hidden;
+				white-space: nowrap;
+				color: var(--container-color);
+				font-size: 14px;
+				&.center
+				{
+					justify-self: center;
+				}
+		
+				&.active
+				{
+					color: var(--container-active-color)
+				}
+			}
+
+			.icon
+			{
+				-webkit-mask-repeat: no-repeat;
+				-webkit-mask-position: center;
+
+				mask-repeat: no-repeat;
+				mask-position: center;
+				background-color: var(--container-color);
+
+				justify-self: start;
+				width: 16px;
+				height: 16px;
+
+				&.icon-time
+				{
+					-webkit-mask-image: url(../icons/clock.svg);
+					mask-image: url(../icons/clock.svg);
+				}
+			}
+		}
+
+		hr 
+		{
+			align-self: center;
+			margin-bottom: 10px;
+			height: 1px;
+			border: none;
+			background-color: var(--card-background-active-color);
+		}
+	}
+}

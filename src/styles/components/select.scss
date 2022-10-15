@@ -1,0 +1,54 @@
+.select
+{
+	position: relative;
+
+	.select-bar
+	{
+		display: grid;
+		grid-template-columns: auto 30px;
+
+		border-radius: 7px;
+		width: auto;
+		height: 40px;
+		
+		font-weight: bold;
+		
+		background-color: var(--control-background-color);
+		color: var(--control-color);
+		cursor: pointer;
+
+		.select-text
+		{
+			width: auto;
+			margin-left: 10px;
+			align-self: center;
+			overflow: hidden;
+		}
+
+		.icon
+		{
+	//		z-index: 100;
+			width: 15px;
+			height: 15px;
+			mask-repeat: no-repeat;
+			mask-position: center;
+			align-self: center;
+			justify-self: center;
+			
+			background-color: var(--control-color);
+			-webkit-mask-image: url(../icons/select-down.svg);
+			mask-image: url(../icons/select-down.svg);
+
+			&.rotated
+			{
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	.select-menu
+	{
+		width: 100%;
+		margin-top: 2px;
+	}
+}

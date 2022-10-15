@@ -1,0 +1,31 @@
+.settings-button-container 
+{
+	.select-menu
+	{
+		margin-top: 5px;
+	}
+}
+
+.settings-button
+{
+	justify-self: end;
+	align-self: flex-end;
+	width: 40px;
+	height: 40px;
+	background-color: var(--container-color);
+	-webkit-mask-image: url(../icons/gear.svg);
+	mask-image: url(../icons/gear.svg);
+	position: relative;
+	cursor: pointer;
+
+	&:hover
+	{
+		background-color: var(--container-active-color);
+	}
+
+	&.rotated
+	{
+		transform: rotate(60deg);
+		background-color: var(--container-active-color);
+	}
+}

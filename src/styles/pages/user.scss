@@ -1,0 +1,54 @@
+.user-page
+{
+    .user-header
+	{
+		display: flex;
+		gap: 25px;
+		margin: 30px 0px 30px 0px;
+		
+		.user-info
+		{
+			color: var(--container-active-color);
+
+			display: flex;
+			gap: 20px;
+
+			flex-direction: column;
+			justify-content: end;
+			
+			.user-name
+			{
+				font-weight: bold;
+				font-size: 40px;
+			}
+
+			.user-stats
+            {
+                display: inline-flex;
+                gap: 10px;
+                font-size: 13px;
+                list-style: none;
+            }
+		}
+
+		.align-end
+		{
+			align-self: flex-end;
+		}
+
+		@media (max-width: $breakpoint-medium)
+		{
+			flex-direction: column;
+			
+            .user-info
+            {
+                gap: 10px;
+            }
+
+			.playlist-title
+			{
+				font-size: 20px !important;
+			}
+		}
+	}
+}

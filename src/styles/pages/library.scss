@@ -1,0 +1,140 @@
+.library-page
+{
+	.library-page-header
+	{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 20px;
+		
+		font-size: 13px;
+
+		.categories
+		{
+			overflow: hidden;
+			display: flex;
+			gap: 7.5px;
+
+			.category-button
+			{
+				overflow: hidden;
+				display: flex;
+				align-items: center;
+				height: 40px;
+				border-radius: 3px;
+				padding: 0px 10px;
+				font-weight: bold;
+				color: var(--container-active-color);
+				cursor: pointer;
+
+				&.active
+				{
+					background-color: var(--control-background-color);
+				}
+			}
+		}
+
+		.buttons
+		{
+			display: flex;
+			gap: 7.5px;
+			overflow: hidden;
+
+			.button-outline
+			{
+				font-size: 13px !important;
+				justify-content: flex-start;
+				height: 30px;
+				font-size: 15px;
+				border-radius: 40px;
+				padding: 0px 10px;
+			}
+		}
+
+		@media (max-width: $breakpoint-medium)
+		{
+			flex-direction: column;
+			gap: 10px;
+			align-items: flex-start;
+			
+			.categories 
+			{
+				justify-content: space-around;
+			}
+			.buttons
+			{
+				justify-content: space-around;
+
+			}
+		}
+	}
+	
+	.page-title
+	{
+		margin-bottom: 20px;
+	}
+	
+	.library-section
+	{
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		margin-bottom: 30px;
+		gap: 15px;
+
+		@media (min-width: $breakpoint-large) and (max-width: $breakpoint-Xlarge)
+		{
+			grid-template-columns: repeat(5, 1fr);
+		}
+
+		@media (min-width: $breakpoint-medium) and (max-width: $breakpoint-large)
+		{
+			grid-template-columns: repeat(4, 1fr);
+		}
+
+		@media (min-width: $breakpoint-small) and (max-width: $breakpoint-medium)
+		{
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		@media (max-width: $breakpoint-small)
+		{
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	.audio-modal
+	{
+		display: flex;
+		flex-direction: row;
+		gap: 20px;
+		
+		@media (max-width: $breakpoint-small)
+		{
+			gap: 0px;
+			display: flex;
+			flex-direction: column;
+
+			.column
+			{
+				width: none;
+			}
+		}
+
+		.column
+		{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			@media (min-width: $breakpoint-small)
+			{
+				width: 50%;
+			}
+
+			&.flex-start
+			{
+				justify-content: start;
+			}
+		}
+	}
+}

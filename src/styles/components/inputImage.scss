@@ -1,0 +1,62 @@
+.input-image-container
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+
+	.input-hidden
+	{
+		display: none;
+	}
+
+	.image-block
+	{
+		width: 90%;
+		max-width: 300px;
+		margin: 3% 0px;
+		border-radius: 5px;
+		
+		&.default
+		{
+			width: 100%;
+			margin: 0px 0px;
+		}
+
+		&:hover 
+		{
+			.input-button
+			{
+				opacity: 1;
+			}
+			.image
+			{
+				filter: brightness(30%);
+			}
+		}
+			
+		.image 
+		{
+			pointer-events: all;
+			border-radius: 5px;
+		}
+
+		.input-button
+		{
+			position: absolute;
+			opacity: 0;
+			top: calc(50%);
+			left: calc(50%);
+			transform: translateY(-50%);
+			transform: translateX(-50%);
+			font-size: 16px;
+			color: white;
+		
+			&:hover
+			{
+				text-decoration: underline;
+				cursor: pointer;
+			}
+		}
+	}
+}

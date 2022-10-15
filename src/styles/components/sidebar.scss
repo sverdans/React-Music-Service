@@ -1,0 +1,151 @@
+.sidebar
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+//	height: calc(100% - 20px - 91px - 32px - var(--sidebar-width));
+	width: var(--sidebar-width);
+	padding: 10px 10px 10px 22px;
+	background: var(--sidebar-background-color);
+	overflow-y: scroll;
+	overflow-x: hidden;
+
+	.sidebar-header
+	{
+		display: flex;
+		height: 50px;
+		align-items: center;
+		justify-content: end;
+
+		.hamburger-icon
+		{
+			justify-self: end;
+		}
+	}
+
+	&.close
+	{
+		.sidebar-text
+		{
+			display: none;
+		}
+	}
+
+	.icon
+	{
+		-webkit-mask-repeat: no-repeat;
+		-webkit-mask-position: center;
+
+		mask-repeat: no-repeat;
+		mask-position: center;
+		margin: auto 10px;
+		background-color: var(--sidebar-color);
+
+		width: 18px;
+		height: 18px;
+
+		&.account-icon
+		{
+			-webkit-mask-image: url(../icons/sidebar-account.svg);
+			mask-image: url(../icons/sidebar-account.svg);
+		}
+
+		&.search-icon
+		{
+			-webkit-mask-image: url(../icons/sidebar-search.svg);
+			mask-image: url(../icons/sidebar-search.svg);
+		}
+
+		&.home-icon
+		{
+			-webkit-mask-image: url(../icons/sidebar-home.svg);
+			mask-image: url(../icons/sidebar-home.svg);
+		}
+
+		&.settings-icon
+		{
+			-webkit-mask-image: url(../icons/sidebar-settings.svg);
+			mask-image: url(../icons/sidebar-settings.svg);
+		}
+
+		&.library-icon
+		{
+			-webkit-mask-image: url(../icons/sidebar-library.svg);
+			mask-image: url(../icons/sidebar-library.svg);
+		}
+
+		&.hamburger-icon
+		{
+			-webkit-mask-image: url(../icons/sidebar-hamburger.svg);
+			mask-image: url(../icons/sidebar-hamburger.svg);
+			cursor: pointer;
+
+			&:hover
+			{
+				background-color: var(--sidebar-active-color);
+			}
+		}
+	}
+
+	.nav-link
+	{
+		display: flex;
+		align-items: center;
+		height: 50px;
+		text-decoration: none;
+		
+		&:hover 
+		{
+			.icon
+			{
+				background-color: var(--sidebar-active-color);
+			}
+			.sidebar-text
+			{
+				color: var(--sidebar-active-color);
+			}
+		}
+
+		.icon-wrapper
+		{
+			width: 38px;
+		}
+		
+		&.active
+		{
+			.icon
+			{
+				background-color: var(--sidebar-active-color);
+			}
+			.sidebar-text
+			{
+				color: var(--sidebar-active-color);
+			}
+		}
+
+
+		.sidebar-text
+		{
+			white-space: nowrap;
+			padding-left: 10px;
+			font-weight: bold;
+			color: var(--sidebar-color);
+		}
+
+		&.disabled
+		{
+			pointer-events: none;
+			opacity: 0.4;
+		}
+	}
+
+	hr 
+	{
+		align-self: center;
+		margin: 10px 0px;
+		height: 1.5px;
+		border: none;
+		background-color: var(--sidebar-color);
+	}
+}

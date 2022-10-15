@@ -1,0 +1,87 @@
+@import "../variables.scss";
+
+.cards-section-header
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 15px;
+	overflow-x: hidden;
+	
+	.section-title
+	{
+		color: var(--container-active-color);
+		font-weight: bold;
+		font-size: 20px;
+		text-decoration: none;
+		cursor: pointer;
+
+		&:hover
+		{
+			text-decoration: underline;
+		}
+	}
+
+	.section-link
+	{
+		color: var(--container-color);
+		font-weight: bold;
+		font-size: 15px;
+		text-decoration: none;
+		cursor: pointer;
+
+		&:hover
+		{
+			text-decoration: underline;
+		}
+	}
+}
+
+.cards-section
+{
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	margin-bottom: 30px;
+	gap: 15px;
+
+	.playlist-card:nth-child(n + 7)
+	{
+		display: none;
+	}
+	
+	@media (min-width: $breakpoint-large) and (max-width: $breakpoint-Xlarge)
+	{
+		grid-template-columns: repeat(5, 1fr);
+		.playlist-card:nth-child(n + 6)
+		{
+			display: none;
+		}
+	}
+
+	@media (min-width: $breakpoint-medium) and (max-width: $breakpoint-large)
+	{
+		grid-template-columns: repeat(4, 1fr);
+		.playlist-card:nth-child(n + 5)
+		{
+			display: none;
+		}
+	}
+
+	@media (min-width: $breakpoint-small) and (max-width: $breakpoint-medium)
+	{
+		grid-template-columns: repeat(3, 1fr);
+		.playlist-card:nth-child(n + 4)
+		{
+			display: none;
+		}
+	}
+
+	@media (max-width: $breakpoint-small)
+	{
+		grid-template-columns: repeat(2, 1fr);
+		.playlist-card:nth-child(n + 3)
+		{
+			display: none;
+		}
+	}
+}

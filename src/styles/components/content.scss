@@ -1,0 +1,14 @@
+.content
+{
+	position: absolute;
+
+	height: calc(100% - 91px);
+	width: calc(100% - var(--sidebar-width) - 30px);
+
+	left: calc(var(--sidebar-width) + 30px);
+
+	background-color: var(--container-background-color);
+	color: var(--container-color);
+
+	overflow-y: scroll;
+}

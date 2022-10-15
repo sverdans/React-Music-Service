@@ -1,0 +1,70 @@
+.file-input
+{
+	white-space: nowrap;
+	height: 40px;
+	border-radius: 5px;
+	padding-left: 3%;
+	color: var(--container-color);
+	background-color: var(--control-background-color);
+	border: none;
+	font-size: 16px;
+	display: flex;
+	justify-content: space-between;
+	cursor: pointer;
+
+	&:hover
+	{
+		.upload-button-wrapper
+		{
+			background-color: var(--container-active-color);
+
+			.upload-button
+			{
+				background-color: var(--container-background-color);
+			}
+		}
+	}
+
+	.file-name
+	{
+		overflow: hidden;
+		align-self: center;
+		white-space: nowrap;
+		width: calc(97% - 60px)
+	}
+
+	.upload-button-wrapper
+	{
+		height: 36px;
+		width: 50px;
+		border-radius: 0px 5px 5px 0px;
+		border: 2px solid var(--container-active-color);
+		background-color: transparent;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+
+		.upload-button
+		{
+			-webkit-mask-repeat: no-repeat;
+			-webkit-mask-position: center;
+
+			mask-repeat: no-repeat;
+			mask-position: center;
+			background-color: var(--container-active-color);
+			
+			width: 20px;
+			margin: 0px auto;
+			height: 20px;
+			-webkit-mask-image: url(../icons/upload.svg);
+			mask-image: url(../icons/upload.svg);
+		}
+	}
+
+	.input-hidden
+	{
+		display: none;
+	}
+}
+

@@ -1,0 +1,52 @@
+.playlist-card
+{
+	width: 100%;
+	max-width: 100%;
+	background-color: var(--card-background-color);
+	border-radius: 6px;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	cursor: pointer;
+
+	.info-wrapper
+	{
+		display: flex;
+		flex-direction: column;
+		width: 87.5%;
+		margin: auto;
+		overflow-x: hidden;
+		gap: 4px;
+
+		.playlist-name
+		{
+			height: 22.5px;
+			color: var(--container-active-color);
+			white-space: nowrap;
+			font-weight: bold;
+			font-size: 16px;
+		}
+
+		.playlist-author
+		{
+			white-space: nowrap;
+			overflow-x: hidden;
+			font-size: 12px;
+
+			height: 40px;
+			color: var(--container-color);
+			font-size: 13.5px;
+		}
+	}
+
+	&:hover
+	{
+		
+		background-color: var(--card-background-active-color);
+
+		.image
+		{
+			box-shadow: 0px 14px 14px rgba(0, 0, 0, 0.3);
+		}
+	}
+}
