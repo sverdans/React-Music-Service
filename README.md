@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Веб-приложение для прослушивания музыки
+Данный репозиторий содержит исходный код веб-приложения, которое позволяет загружать и воспроизводить аудио файлы. Приложение также даёт возможность авторизованным пользователям формировать свою медиатеку через функции создания/добавления плейлистов.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Технологии
+Язык программирования: `JavaScript`
 
-## Available Scripts
+Используемые библиотеки: 
+- `React`
+- `React Router`
+- `React Redux`
+- [`Howler`](https://howlerjs.com) - Audio library for the modern web.
 
-In the project directory, you can run:
+## Использование приложения
+1) Регистрация
+![image](https://user-images.githubusercontent.com/115738921/196048481-79fbd93f-9435-45b0-9f94-9211b2c9fc94.png)
 
-### `npm start`
+2) Редактирования профиля
+![image](https://user-images.githubusercontent.com/115738921/196048509-e4baf35f-910a-41e5-a268-b458b90862bd.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3) Медиатека + создание нового плейлиста
+![image](https://user-images.githubusercontent.com/115738921/196048529-fab7fa30-31ac-4f98-869f-41cb1d75c458.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4) Редактирование плейлиста
+![image](https://user-images.githubusercontent.com/115738921/196048543-d33ead98-ffcd-48d1-b7f8-c35369f695da.png)
 
-### `npm test`
+5) Загрузка аудио 
+![image](https://user-images.githubusercontent.com/115738921/196048579-99a0f22a-6a44-4996-aa24-5d771dfdd46b.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+6) Добавление аудио в плейлист
+![image](https://user-images.githubusercontent.com/115738921/196048594-b1982ca5-04eb-46c9-96c4-33e42d72398f.png)
 
-### `npm run build`
+7) Страница пользователя
+![image](https://user-images.githubusercontent.com/115738921/196048616-810123a7-6e1b-488a-8635-9fb4838fb1d0.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+8) Изменение цветовой темы
+![image](https://user-images.githubusercontent.com/115738921/196048623-dc8184e7-4f6d-4859-9d1c-4336dda791f9.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Примечания
+**Не является** законченным программным продуктом.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Присутствуют** недоработанные и тестовые модули.
